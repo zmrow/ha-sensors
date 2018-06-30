@@ -4,7 +4,7 @@ esphomeyaml:
   board: nodemcuv2
 
 wifi:
-  ssid: 'EgorandTron_2.4'
+  ssid: !secret wifi_ssid
   password: !secret wifi_password
 
 mqtt:
