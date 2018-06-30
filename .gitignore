@@ -1,0 +1,5 @@
+secrets.yaml
+.piolibdeps*
+.pioenvs*
+.DS_Store
+.DS_Store?
