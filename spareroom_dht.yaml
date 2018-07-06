@@ -11,6 +11,7 @@ mqtt:
   broker: !secret mqtt_broker_ip
   username: !secret mqtt_username
   password: !secret mqtt_password
+  topic_prefix: "home/spareroom"
 
 # Enable logging
 logger:
@@ -27,9 +28,9 @@ sensor:
     update_interval: 3min
     humidity:
       filters:
-      name: "Spare Room Humidity"
+      name: "humidity"
     temperature:
-      name: "Spare Room Temp"
+      name: "temperature"
       filters:
         - lambda: return x * (9.0/5.0) + 32.0;
       unit_of_measurement: "°F"
