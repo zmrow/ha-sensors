@@ -27,10 +27,16 @@ sensor:
     pin: D1
     update_interval: 3min
     humidity:
+      name: "Spare Room Humidity"
+      state_topic: "home/spareroom/humidity/state"
+      accuracy_decimals: 1
+      icon: 'mdi:water-percent'
       filters:
-      name: "humidity"
     temperature:
-      name: "temperature"
+      name: "Spare Room Temp"
+      state_topic: "home/spareroom/temperature/state"
+      accuracy_decimals: 1
+      icon: 'mdi:thermometer'
       filters:
         - lambda: return x * (9.0/5.0) + 32.0;
       unit_of_measurement: "°F"
